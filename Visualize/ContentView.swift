@@ -32,13 +32,13 @@ struct ContentView: View {
                                 
                                 return Color.clear
                             })
-                    } //ForEach
-                } //HStack
+                    }// ForEach
+                }// HStack
                 .frame(height: viewModel.height + (viewModel.height * viewModel.maxScaleGrow))
                 .padding(EdgeInsets(top: 0, leading: viewModel.width, bottom: 0, trailing: viewModel.width))
-            } //ScrollView
-        }//GR
-    }//body
+            }// ScrollView
+        }// GR
+    }// body
 }
 
 struct ContentView_Previews: PreviewProvider {

@@ -9,7 +9,7 @@ import SwiftUI
 
 class ViewModel: ObservableObject {
     
-    var objects: [ImageObject]
+    private(set) var objects: [ImageObject]
     @Published var currentPos: CGFloat = 0.0
     
     let height: CGFloat = 160
