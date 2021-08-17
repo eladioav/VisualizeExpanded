@@ -8,6 +8,7 @@
 import SwiftUI
 
 class ImageObject {
+
     var name: String
     var scale: CGFloat
     
@@ -15,4 +16,12 @@ class ImageObject {
         self.name = name
         self.scale = scale
     }
+}
+
+extension ImageObject: Equatable {
+    
+    static func == (lhs: ImageObject, rhs: ImageObject) -> Bool {
+        return lhs.name == rhs.name
+    }
+    
 }

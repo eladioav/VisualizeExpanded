@@ -22,13 +22,13 @@ struct ContentView: View {
                             .scaledToFit()
                             .frame(height:viewModel.height)
                             .foregroundColor(.gray)
-                            .scaleEffect(viewModel.getScale(imageName: imageObject.name))
+                            .scaleEffect(viewModel.getScale(imageObject: imageObject))
                             .background(GeometryReader { grImage -> (Color) in
                                 let rectImage = grImage.frame(in: .global)
                                 let rectScreen = grGlobal.frame(in: .global)
 
                                 viewModel.set(screenFrame: rectScreen)
-                                viewModel.setPosition(with: rectImage, imageName: imageObject.name)
+                                viewModel.setPosition(for: rectImage, imageObject: imageObject)
                                 
                                 return Color.clear
                             })
